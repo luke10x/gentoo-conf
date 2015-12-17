@@ -1,0 +1,32 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+menuentry "Gentoo Linux" {
+        insmod ext2
+        set root=(hd0,1)
+        linux /boot/kernel root=/dev/ram1 ramdisk_size=1048576 rw
+        initrd /boot/initfamfs
+}
+
+
+#menuentry "Ubuntu Linux" {
+	#recordfail
+	#load_video
+	#gfxmode $linux_gfx_mode
+	#insmod gzio
+	#insmod part_msdos
+	#insmod ext2
+	#set root='hd0,msdos1'
+	#if [ x$feature_platform_search_hint = xy ]; then
+	  #search --no-floppy --fs-uuid --set=root --hint-bios=hd0,msdos1 --hint-efi=hd0,msdos1 --hint-baremetal=ahci0,msdos1  0a5b167a-5255-4060-b95a-f4a9a553db8a
+	#else
+	  #search --no-floppy --fs-uuid --set=root 0a5b167a-5255-4060-b95a-f4a9a553db8a
+	#fi
+	#echo    'Loading Linux 3.13.0-63-generic ...'
+	#linux   /boot/vmlinuz-3.13.0-63-generic root=UUID=0a5b167a-5255-4060-b95a-f4a9a553db8a ro  quiet splash $vt_handoff
+	#echo    'Loading initial ramdisk ...'
+	#initrd  /boot/initrd.img-3.13.0-63-generic
+#}

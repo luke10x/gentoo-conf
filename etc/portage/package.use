@@ -1,0 +1,89 @@
+net-wireless/wpa_supplicant -hs2-0 ssl
+app-misc/tmux vim-syntax
+
+# For Openbox
+>=x11-libs/cairo-1.14.2 X
+>=x11-libs/pango-1.36.8 X
+
+# For firefox
+www-client/firefox gstreamer
+>=x11-libs/gdk-pixbuf-2.30.8-r2 X
+>=dev-lang/python-2.7.9-r1:2.7 sqlite
+
+# For Git
+app-crypt/pinentry ncurses
+
+# For Gnome Terminal
+>=gnome-base/gvfs-1.24.2 gtk
+>=dev-libs/glib-2.44.1 dbus
+>=x11-libs/gtk+-3.16.6 X
+x11-terms/gnome-terminal -nautilus -gnome-shell
+
+app-emulation/virtualbox qt4 -extensions -headless  
+>=media-libs/libsdl-1.2.15-r8 X
+dev-qt/qtopengl -qt3support 
+>=dev-qt/qtgui-4.8.6-r4:4 -qt3support
+>=dev-qt/qtcore-4.8.6-r2:4 -qt3support
+
+app-editors/vim-core -minimal
+app-editors/vim -minimal
+app-editors/vim -X
+app-editors/vim python 
+
+media-video/vlc X a52 alsa atmo avcodec avformat dirac dts libass live matroska musepack omxil oss qt4 taglib theora twolame v4l vlm 
+
+media-video/ffmpeg v4l
+
+>=sys-libs/zlib-1.2.8-r1 minizip
+
+media-fonts/font-misc-misc X nls
+sys-libs/ncurses tinfo -minimal
+
+media-fonts/urw-fonts X
+
+media-libs/clutter X
+
+app-emulation/qemu aio -alsa -bluetooth -caps -curl -fdt -filecaps -jpeg -ncurses -opengl -pin-upstream-blobs -png -sdl -seccomp threads -usb uuid -vhost-net -vnc
+app-admin/sudo -ldap -sendmail
+
+app-emulation/docker aufs lxc 
+
+net-misc/tightvnc -tcpd
+
+x11-misc/x11vnc ssl -avahi crypt fbcon xinerama
+
+net-misc/x2goclient -ldap -nsplugin
+
+app-text/poppler lcms
+app-text/ghostscript-gpl -X cups
+
+net-irc/irssi perl
+
+virtual/mysql -embeded -static static-libs -minimal
+dev-db/mariadb -embeded -static -static-libs -minimal 
+dev-db/mysql -embeded -static static-libs -minimal
+
+dev-db/mysql debug perl test -community -latin1  
+def-db/mysql ssl 
+dev-db/mysql -profiling # requires mysql when enabled
+dev-db/mysql jmalloc -tcmalloc # requires one of two
+dev-db/mysql -embedded
+dev-db/mysql -extraengine # extra engine addèh 
+sys-libs/zlib static-libs
+dev-libs/openssl static-libs
+
+x11-terms/rxvt-unicode focused-urgency font-styles mousewheel startup-notification -vanilla 256-color alt-font-width -blink -buffer-on-clear fading-colors -iso14755 -perl pixbuf -secondary-wheel -unicode3 -wcwidth xft
+
+x11-base/xorg-server xvfb
+
+x11-wm/fluxbox xinerama
+
+media-gfx/inkscape -spell
+
+xfce-base/thunar dbus
+
+dev-lang/php apache2 bcmath curl gd json mysqli pdo sqlite 
+app-eselect/eselect-php apache2
+
+>=media-libs/harfbuzz-0.9.41 icu
+

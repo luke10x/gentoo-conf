@@ -1,0 +1,12 @@
+dns_domain_lo="homenetwork"
+modules_wlp3s0="wpa_supplicant"
+wpa_supplicant_wlp3s0="-Diwlwifi"
+iconfig_wlp3s0="dhcp"
+
+# Keep our kernel assigned address, unless the interface goes
+# down so assign another via DHCP. If DHCP fails then add a
+# static address determined by APIPA
+config_eth0="noop
+dhcp"
+fallback_eth0="null
+apipa"
